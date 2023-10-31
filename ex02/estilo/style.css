@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0px;
+}
+
+div {
+  background-color: #111;
+  margin: 30px; /*Separar as duas divis*/
+  padding: 20px;
+  border-radius: 10px; /*Arredondar as bordas*/
+}
+
+h2 {
+  color: white;
+  margin: 10px;
+}
+p {
+  color: #b2b2b2;
+  margin: 10px;
+}
+
+a {
+  display: inline-block;
+  background-color: #febe01;
+  color: #332200;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+span {
+  color: #febe01;
+}
