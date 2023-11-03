@@ -1,0 +1,65 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto; /*Para alinhar com o header*/
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center; /*Alinhando o conteúdo ao centro da img*/
+}
+
+.introducao h1 {
+  font-size: 4.5rem; /**/
+  line-height: 1.125; /*Esse valor é a mutiplicação do font size (4.5*16*1.25=81)*/
+  margin-bottom: 30px;
+  position: relative; /*Em relação ao h1 before*/
+}
+
+/*Adicionando o desenho*/
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center; /*Adicionando a img do desenho*/
+  position: absolute; /*Em relação ao (introducao h1)*/
+  top: -15px; /*posicionando o desenho*/
+  left: -40px; /*posicionando o desenho */
+  z-index: -1; /*Posicionando o desenho por traz do h1*/
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1rf;
+  }
+  .introducao img {
+    display: none; /*Tira a img*/
+  }
+}

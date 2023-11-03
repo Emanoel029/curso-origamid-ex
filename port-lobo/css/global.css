@@ -1,0 +1,40 @@
+body {
+  font-family: "Fira Sans", Arial, sans-serif;
+  margin: 0px;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; /*tirando as bolinhas no menu*/
+}
+
+img {
+  max-width: 100%; /*Padrão para img*/
+  height: auto; /*Para não esmagar a img, depois de definido as dimenções n HTML*/
+  display: block;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1; /*Altura de linha*/
+  text-transform: uppercase;
+  word-break: break-all; /*Quebra a palavra(Experiência)*/
+  max-width: 4ch; /*Vai quebrar na 4ª letra da palavra(Experiencia*/
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize; /*Só vai aumentar a primeira letra*/
+    max-width: initial I !important; /*Não vai mais quebrar na 4ª letra da palavara O !IMPORTANT vai escerver por cima de qualquer valor q vier na frente*/
+  }
+}

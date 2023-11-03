@@ -1,0 +1,154 @@
+.formacao {
+  background: #141414;
+  color: #ffffff;
+}
+
+.formacao-conteiner {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px; /*Tem na parte global que reaproveita*/
+  position: relative; /*Ao formacao-conteiner::after*/
+}
+/*After depois, pq desenho está acima do container e do footer*/
+.formacao-conteiner::after {
+  content: "";
+  display: block;
+  position: absolute; /*Ao formacao-conteiner*/
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat;
+  bottom: -50px; /*Metade da altura*/
+  left: 20px;
+}
+
+.formacao .subtitulo {
+  color: #000000;
+  max-width: 5ch; /*Para deixa a FORM AÇÃO*/
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  line-height: 1.33; /*Tamanho entre as linhas*/
+  max-width: 40ch; /*para deixar o texto do tamanho bom de largura*/
+  margin-bottom: 60px; /*Espaço entre pagarafo e div empresa*/
+  color: #a3a3a3;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.faculdade-lista {
+  display: flex; /*colocando um ao lado do outro*/
+  flex-wrap: wrap; /*Caso n caiba ele vai quebrar*/
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.faculdade {
+  flex: 1; /*Deixa os conteúdos centinhos 1 do lado do outros do mesmo tamanho*/
+  background: #000000;
+  padding: 20px; /*Desgrudar das pontas*/
+  border-radius: 4px; /*Arredondar as pontas*/
+  display: flex; /*Mudei para pegar o margin-bottom*/
+  flex-direction: column; /*Mudei para pegar o margin-bottom*/
+}
+
+.faculdade-tipo {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  flex: 1; /*faz com q o item creça o máximo q dê pra ele crescer*/
+  font-size: 1.25rem;
+  line-height: 1.4; /*Espaço entre as linhas*/
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/*Criando elemento decorativo*/
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a); /*Cor do detalhe*/
+  position: absolute; /*em relação a faculdade-curso*/
+  left: -24px;
+}
+
+.faculdade-instituicao {
+  font-size: 1.125rem;
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.formacao-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative; /*Em relação a formacao-extra h3::before*/
+}
+
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+
+  position: absolute; /*Em relação a formacao-extra*/
+  left: -36px;
+  top: -4px;
+}
+
+.cursos h3::before {
+  background: url("../img/cursos.svg") no-repeat center center;
+}
+
+.idomas h3::before {
+  background: url("../img/idiomas.svg") no-repeat center center;
+}
+
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.formacao-extra span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex; /*Temq q ser flex p a quantidade de hora ficar na ponta*/
+  justify-content: space-between; /*Colocando a quantidade de hora na ponta*/
+}
+
+@media (max-width: 800px) {
+  .formacao-conteiner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 60px;
+  }
+
+  .formacao .subtitulo {
+    color: #ffffff;
+  }
+  .formacao-texto {
+    font-size: 1.25rem;
+  }
+  .formacao-extra h3::before {
+    position: initial; /*Para colocar os icones no valor inicial*/
+    margin-bottom: 10px;
+  }
+}

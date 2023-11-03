@@ -1,0 +1,36 @@
+.header {
+  max-width: 1200px; /*O conteúdo do site vai crescer até 1200px*/
+  margin: 0 auto; /*Alinhando o conteúdo ao centro com margin pq é conteúdo de bloco*/
+  padding: 40px 20px;
+  display: flex; /*Um item do lado do outro*/
+  justify-content: space-between; /*Espaçar marca em um canto e menu no outro*/
+  align-items: center; /*Alinha um item ao centro do outro*/
+}
+
+.header-menu {
+  display: flex; /*Opções do menu um do lado do outro*/
+  flex-wrap: wrap; /*Quando diminuir a tela mais q o formato dele, ele comece a quebrar*/
+  gap: 10px;
+  justify-content: center; /*Coloca o menu ao centro, quando quebrar a tela*/
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3; /*Altura de linha*/
+  padding: 10px 20px;
+  text-decoration: none; /*Tirando o underline*/
+  color: #141414;
+  display: block; /*Para pegar corretamento os valores de padding*/
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 40px; /*Aumentando a margem do menu em relação a logo*/
+    padding: 20px; /**/
+  }
+  .header a {
+    background: #f5f5f5; /*pintando o fundo do botão */
+    border-radius: 4px; /*Arredondando a borda do botão*/
+  }
+}
