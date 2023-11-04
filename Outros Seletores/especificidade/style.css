@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+#produto {
+  color: brown;
+}
+
+/*Tem prioridade sobre a outra class titulo embora esteja vindo primeiro, pq tem duas classes .titulo.teste*/
+.titulo.teste {
+  color: chartreuse;
+}
+
+/*O important vai priorizar esse seletor independente de onde esteja*/
+h2 {
+  color: black !important;
+}
+
+.titulo {
+  color: aqua;
+}
+
+html body section h2 {
+  border-left: 8px solid lightgreen;
+}
