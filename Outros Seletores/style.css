@@ -1,0 +1,38 @@
+/*Para fazer o estilos dos inputs q tem required*/
+[required] {
+  border: 2px solid tomato;
+}
+
+[href="#contato"] {
+  border: 2px solid green;
+}
+
+/*Vai pintar apenas os que começam'^' com #*/
+[href^="#"] {
+  background: pink;
+}
+
+/*Vai pintar apenas os que terminam'$' com (.com)*/
+[href$=".com"] {
+  background: black;
+}
+
+/*Selecionando só h2 filho de section*/
+section > h2 {
+  color: tomato;
+}
+
+/*Tirando a margem do ultimo p*/
+p + p {
+  margin-top: 20px;
+}
+
+/*Tirando a margem do ultimo p*/
+article p:last-child {
+  margin-bottom: 0px;
+}
+
+article {
+  background-color: aqua;
+  padding: 10px;
+}
