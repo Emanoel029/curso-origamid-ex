@@ -1,0 +1,12 @@
+/*O root é um Seletor HTML com mais especificidade, pois ele pega svg e xml */
+:root {
+  --roxo: #84e;
+  --borda: 4px solid blue;
+}
+
+h1 {
+  color: var(--roxo);
+}
+p {
+  border: var(--borda);
+}
